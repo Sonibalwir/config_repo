@@ -7,7 +7,7 @@ server:
 
   spring:
   application:
-    name: customer-service
+    name: order-service
 
 spring:
   datasource:
