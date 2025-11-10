@@ -1,15 +1,17 @@
-global:
-  message: Welcome to global Microservice Environment
+server:
+  port: 8888
 
-logging:
-  level:
-    root: INFO
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Sonibalwir/config_repo
+          clone-on-start: true
+          force-pull: true
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,refresh
-  endpoint:
-    health:
-      show-details: always
+        include: health,info
